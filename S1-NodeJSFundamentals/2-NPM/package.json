@@ -1,0 +1,14 @@
+{
+  "name": "airtribe-batch-13",
+  "version": "1.0.0",
+  "description": "Demo of all the NodeJS concepts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jay Chakra - Airtribe",
+  "license": "ISC",
+  "dependencies": {
+    "math-sqrt": "^1.0.1"
+  }
+}
