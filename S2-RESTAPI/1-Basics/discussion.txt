@@ -1,0 +1,65 @@
+- Gets the list of all the courses and their details
+
+Noun: courses or course ==> debatable
+Verb: GET
+
+Option 1: GET /api/v1/courses       
+
+Option 2: GET /api/v1/course
+
+Option 3: GET /api/v1/courses/:courseId
+
+Option 4: GET /api/v1/getCourses
+
+
+Best practices ==> 
+1. Resource name should always be plural
+2. Whenever we talk about resources it should always be noun we should not club actions with resources
+3 Actions should always be identified by HTTP VERB
+
+
+- Gets the details of the course named 1234
+
+Option 1: GET /api/v1/courses/1234
+GET /api/v1/courses/1235
+GET /api/v1/courses/1236
+
+
+Option 2: GET /api/v1/courses/:courseId
+
+
+- Creates the launchpad/course with the provided details
+
+Option 1: POST /api/v1/courses   
+body: 
+
+
+- Gets the average ratings of all the students for the course 1234
+
+Option 1: GET /api/v1/courses/:courseId/students
+
+Option 2: GET /api/v1/courses/:courseId/avg-ratings
+
+Option 3: GET /api/v1/courses/average/:courseId
+
+Option 4: GET : /api/v1/courses-details
+
+
+Option 5: GET /api/v1/courses/:courseId?ratings=average&age-group=teenagers
+
+Query Paramaters
+Path Parameters
+
+
+Q4: Gel all students associated with a course
+
+1. GET /api/v1/courses/:courseID/students
+2. GET /api/v1/students?courseId=cID
+
+
+
+
+
+
+
+

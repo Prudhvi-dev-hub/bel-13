@@ -1,0 +1,49 @@
+const asyncFunction1 = (cb) => {
+    setTimeout(() => {
+        console.log("Async Function 1");            
+        cb();
+    }, 1000);
+};
+
+const asyncFunction2 = (cb) => {
+    setTimeout(() => {
+        console.log("Async Function 2");
+        cb();
+    }, 1000);
+};
+
+const asyncFunction3 = (cb) => {
+    setTimeout(() => {
+        console.log("Async Function 3");
+        cb();
+    }, 1000);
+};
+// Messy
+// Don;t want your code to drift right
+// Callback hell
+const main = async () => {
+    console.log("Step 1");
+    asyncFunction1(() => {
+        asyncFunction2(() => {
+            asyncFunction3(() => {
+                console.log("All Done");
+            });
+        });
+    });
+    console.log("Step 2");
+};
+
+main();
+
+/*
+1. Difficult to understand
+2. Inversion of Control
+3. Scalability
+4. Callback Hell
+
+
+Promises
+
+
+
+
