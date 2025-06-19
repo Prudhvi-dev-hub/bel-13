@@ -34,16 +34,3 @@ const main = async () => {
 };
 
 main();
-
-/*
-1. Difficult to understand
-2. Inversion of Control
-3. Scalability
-4. Callback Hell
-
-
-Promises
-
-
-
-
