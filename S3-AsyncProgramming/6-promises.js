@@ -1,9 +1,9 @@
 const asyncFunction1 = (cb) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log("Async Function 1");    
+            // console.log("Async Function 1");    
             reject(1);
-        }, 1000);
+        }, 500000000);
     })
 };
 
@@ -11,9 +11,9 @@ const asyncFunction1 = (cb) => {
 const asyncFunction2 = (cb) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log("Async Function 2");    
+            // console.log("Async Function 2");    
             reject(2);
-        }, 1000);
+        }, 200000000);
     })
 };
 
@@ -21,9 +21,9 @@ const asyncFunction2 = (cb) => {
 const asyncFunction3 = (cb) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log("Async Function 3");    
+            // console.log("Async Function 3");    
             reject(3);
-        }, 1000);
+        }, 10000000);
     })
 };
 
@@ -82,10 +82,18 @@ const main = async () => {
     // console.log(responseAny);
     // responseAny.then(res => {
     //     console.log(res);
-    // })
+    // }).catch(e => console.log(e));
 
+
+    /*
+
+    */
     const responseRace = Promise.race([asyncFunction1(), asyncFunction2(), asyncFunction3()]); // settled promises
-    console.log(responseRace);
+    setInterval(() => {
+        console.log(responseRace);
+    }, 5000)
+    
+    
     responseRace.then(res => {
         console.log(res);
     }).catch(e => console.log(e))
